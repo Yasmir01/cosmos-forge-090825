@@ -1,9 +1,16 @@
 export default function ZonePicker() {
-  const mapContainer = useRef<HTMLDivElement>(null);
+  console.log("✅ ZonePicker mounted"); // <--- put it here
 
-  return (
-    <div style={{ width: "100%", height: "100vh", backgroundColor: "red" }}>
-      <div ref={mapContainer} style={{ width: "100%", height: "100%" }} />
-    </div>
-  );
-}
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+
+  useEffect(() => {
+  console.log("🎯 useEffect ran");
+  // 🚧 Temporarily disable map setup
+  // map.current = new mapboxgl.Map({
+  //   container: mapContainer.current,
+  //   style: "mapbox://styles/mapbox/streets-v11",
+  //   center: [-74.5, 40],
+  //   zoom: 9,
+  // });
+}, []);
