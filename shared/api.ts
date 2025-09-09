@@ -1,12 +1,13 @@
-/**
- * Shared code between client and server
- * Useful to share types between client and server
- * and/or small pure JS functions that can be used on both client and server
- */
+import React from "react";
+import ZonePicker from "@/components/ZonePicker"; // uses the @ alias from vite.config
 
-/**
- * Example response type for /api/demo
- */
-export interface DemoResponse {
-  message: string;
+function App() {
+  console.log("🚀 App mounted");
+  return (
+    <div style={{ width: "100%", height: "100vh" }}>
+      <ZonePicker />
+    </div>
+  );
 }
+
+export default App;
